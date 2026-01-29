@@ -21,7 +21,7 @@ jobs:
       - name: Build PDF
         run: |
           mkdir -p dist
-          typst compile cv.typ dist/cv.pdf
+          typst compile --root . cv.typ dist/cv.pdf
           cp -r site/* dist/
 
       - name: Deploy to gh-pages
